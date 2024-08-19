@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "kartei-flashcards-plugin",
+	"name": "Kartei - Flashcards",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
+	"description": "This is a obsidian plugin, which implements flashcards based on the users notes.",
 	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"authorUrl": "https://kyleklus.github.io/",
+	"fundingUrl": "https://ko-fi.com/majorenkidu",
 	"isDesktopOnly": false
 }
