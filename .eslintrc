@@ -1,23 +1,109 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "env": { "node": true },
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
-    ], 
-    "parserOptions": {
-        "sourceType": "module"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
-      "@typescript-eslint/ban-ts-comment": "off",
-      "no-prototype-builtins": "off",
-      "@typescript-eslint/no-empty-function": "off"
-    } 
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "ignorePatterns": [
+    "*.js"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    // "react-hooks/exhaustive-deps": "off",
+    // "react/react-in-jsx-scope": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "eslintIntegration": true,
+        "printWidth": 120,
+        "endOfLine": "auto"
+      }
+    ],
+    "react/prefer-stateless-function": "error",
+    // "react/button-has-type": "error",
+    // "react/no-unused-prop-types": "warn",
+    // "react/jsx-pascal-case": "error",
+    // "react/jsx-no-script-url": "error",
+    // "react/no-children-prop": "error",
+    // "react/no-danger": "error",
+    // "react/no-danger-with-children": "error",
+    // "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+    // "react/jsx-fragments": "error",
+    // // "react/destructuring-assignment": ["error", "always", { "destructureInSignature": "always" }],
+    // "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary"] }],
+    // "react/jsx-max-depth": ["error", { "max": 5 }],
+    // "react/function-component-definition": ["warn", { "namedComponents": "arrow-function" }],
+    // "react/jsx-key": [
+    //     "error",
+    //     {
+    //         "checkFragmentShorthand": true,
+    //         "checkKeyMustBeforeSpread": true,
+    //         "warnOnDuplicates": true
+    //     }
+    // ],
+    // "react/jsx-no-useless-fragment": "warn",
+    // "react/jsx-curly-brace-presence": "warn",
+    // "react/no-typos": "warn",
+    // "react/display-name": "warn",
+    "react/self-closing-comp": "warn"
+    // "react/jsx-sort-props": "warn",
+    // "react/jsx-one-expression-per-line": "off",
+    // "react/prop-types": "off"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
   }
+}
